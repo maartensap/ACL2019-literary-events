@@ -4,9 +4,9 @@ RESULTS_DIR=../results/$MODEL
 mkdir -p $RESULTS_DIR
 
 for i in 0 1 2 3 4
-	do
-		python3 neural.py -m train --writePath $RESULTS_DIR/$MODEL.${i} -e ../data/guten.vectors.txt --pad --batchsize 16 --bert
-		python3 neural.py -m test --existingModel $RESULTS_DIR/$MODEL.${i}.hdf5 -e ../data/guten.vectors.txt --pad --batchsize 16 --bert --predictionsFile $RESULTS_DIR/$MODEL.${i}.test.preds.txt
+do
+    python3 neural.py -m train --writePath $RESULTS_DIR/$MODEL.${i} -e ../data/guten.vectors.txt --pad --batchsize 16 --bert
+    python3 neural.py -m test --existingModel $RESULTS_DIR/$MODEL.${i}.hdf5 -e ../data/guten.vectors.txt --pad --batchsize 16 --bert --predictionsFile $RESULTS_DIR/$MODEL.${i}.test.preds.txt
 done
 
 

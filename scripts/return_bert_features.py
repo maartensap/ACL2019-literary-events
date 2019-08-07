@@ -167,7 +167,7 @@ sents, orig_lines = read_sentences([args.file])
 
 berts = get_bert_representations(model_path, sents)
 
-with open(args.output, "w", encoding="utf-8") as out:
+with open(args.output, "w+", encoding="utf-8") as out:
     for idx, bert in enumerate(berts):
         orig=orig_lines[idx]
         for i in range(len(orig)):
