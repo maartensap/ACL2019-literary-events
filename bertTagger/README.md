@@ -15,3 +15,5 @@ It will output a pandas pickled dataframe, where the columns of interest are:
 - `toks`: the tokens/words in the sentence (note, some tokens are multiple BERT-tokens due to WordPiece tokenization, but the code re-aggregates them; for the non-aggregate WordPieces, see `toks_ids`)
 - `predEventLabel`: the predicted realis tags; 1 if there is a realis event detected, 0 otherwise
 
+Note, in order to train the model, please run `data/tsv/formatToDf.py` which will generate the train.csv, dev.csv and test.csv files.
+
